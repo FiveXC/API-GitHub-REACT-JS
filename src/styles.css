@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+*{ 
+margin:0;
+padding:0;
+box-sizing: border-box;
+text-decoration: none;
+}
+body{
+background-color: #3F3F3F;
+color: rgb(0, 0, 0);
+font-family: Roboto,sans-serif;
+}
+#root{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 2rem;
+}
+.areaInput{
+display: flex;
+align-items: center;
+flex-direction: column;
+background-color: white;
+border-radius: 1rem;
+padding: 3rem;
+gap: 2rem;
+position: relative;
+margin-bottom: 5rem;
+}
+form{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 2rem;
+}
+.inputGitHub{
+padding-left: 0.2rem;
+height: 8vh;
+border: 1px solid black;
+}
+.btnPrincipal{
+padding: 1rem;
+cursor: pointer;
+font-weight: 700;
+background-color: #3F3F3F;
+color: white;
+border: none;
+border-radius: 0.5rem;
+}
+.btnPrincipal:active{
+scale: 0.95;
+}
+.domAPI{
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 100%;
+position: relative;
+}
+.divDom{
+margin-top: 2rem;
+display: flex;
+align-items: center;
+flex-direction: column;
+width: 100%;
+gap: 2rem;
+position: relative;
+flex-wrap: wrap;
+}
+.divAreaNomeFoto{
+display: flex;
+align-items: center;
+font-size: 1.2rem;
+font-weight: 800;
+margin-bottom: 3rem;
+}
+.imgDom{
+width: 10em;
+height: 10em;
+cursor: pointer;
+border-radius: 5em;
+}
+.imgDom:active{
+scale: 0.95;
+}
+.imgDom:hover{
+border: 4px solid rgb(162, 106, 214);
+}
+.divAreaRepositorio{
+display: flex;
+justify-content: center;
+flex-wrap: wrap;
+gap: 1.5rem;
+font-size: 0.8rem;
+font-weight: 900;
+padding: 2rem;
+margin-top: 2rem;
+}
+.linkRepositorio{
+background-color: #3F3F3F;
+color: white;
+padding: 1rem;
+border-radius: 0.5rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.linkRepositorio:hover{
+background-color:rgb(162, 106, 214);
+color: rgb(255, 255, 255);
+transition: 0.4s;
+}
+.linkRepositorio:active{
+scale: 0.95;
+}
+
+/*IPHONE SE PARA BAIXO*/ 
+@media  (max-width: 376px )  { 
+.areaInput{
+width: 20em;
+}
+.btnPrincipal{
+width: 10em;
+}
+.inputGitHub{
+width: 20em;
+}
+.divAreaNomeFoto{
+gap: 1rem;
+}
+.linkRepositorio{
+width: 20em;
+}
+
+}
+        
+        
+/*CELL POSIÇÃO PORTA RETRATO*/
+@media (min-width: 377px) and (max-width: 575.98px) {
+.areaInput{
+width: 20em;
+}
+.btnPrincipal{
+width: 10em;
+}
+.inputGitHub{
+width: 18em;
+height: 3em;
+font-size: 1rem;
+font-weight: 500;
+}
+.divAreaNomeFoto{
+gap: 3rem;
+}
+.linkRepositorio{
+width: 20em;
+} 
+}
+                    
+/*CELL MODO PAISAGEM*/
+@media (min-width: 576px) and (max-width: 991.98px) { 
+.areaInput{
+width: 32em;
+}
+.btnPrincipal{
+width: 10em;
+}
+.inputGitHub{
+width: 18em;
+height: 3em;
+font-size: 1rem;
+font-weight: 500;
+}
+.divAreaNomeFoto{
+gap: 5rem;
+margin-bottom: 8rem;
+}
+.linkRepositorio{
+width: 30em;
+} 
+}
+        
+/*NOTEBOOKS*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.areaInput{
+width: 50em;
+}
+.btnPrincipal{
+width: 10em;
+}
+.inputGitHub{
+margin-top: 5rem;
+width: 40em;
+font-size: 1rem;
+font-weight: 500;
+}
+.divAreaNomeFoto{
+gap: 8rem;
+margin-bottom: 8rem;
+}
+}
+            
+@media (min-width: 1200px){
+.areaInput{
+width: 50em;
+}
+.btnPrincipal{
+width: 10em;
+}
+.inputGitHub{
+width: 40em;
+height: 3em;
+font-size: 1rem;
+font-weight: 500;
+}
+.divAreaNomeFoto{
+gap: 8rem;
+margin-bottom: 8rem;
+}
+}
