@@ -32,26 +32,30 @@ try{
 
 if(inputGithub.current.value){
 
-        let infosPessoas = await fetch(`https://api.github.com/users/${inputGithub.current.value}`)
+    if(inputGithub.current.value){
+  
+          let infosPessoas = await fetch(`https://api.github.com/users/${inputGithub.current.value}`)
+          let repositorios = await fetch(`https://api.github.com/users/${inputGithub.current.value}/repos`)
 
-        if(infosPessoas.ok){
-            infosPessoas = await infosPessoas.json()
-            setDadosUser(infosPessoas)
-        }
-        else{
-            throw new Error(`Erro na requisição infosPessoas, ERROR: ${infosPessoas.status}`);
-        }
-        
+          if(infosPessoas.ok && repositorios.ok){
 
-        let repositorios = await fetch(`https://api.github.com/users/${inputGithub.current.value}/repos`)
+              infosPessoas = await infosPessoas.json()
+              repositorios = await repositorios.json()
+              setDadosUser(infosPessoas)
+              setRepUser(repositorios)
+          }
+          else{
 
-        if(repositorios.ok){
-            repositorios = await repositorios.json()
-            setRepUser(repositorios)
-        }
-        else{
-            throw new Error(`Erro na requisição repositorios, ERROR: ${repositorios.status}`);
-        }
+            if(!infosPessoas.ok ){  
+              throw new Error(`Erro na requisição infosPessoas, ERROR: ${infosPessoas.status}`);
+            }
+
+            if(!repositorios.ok){
+              throw new Error(`Erro na requisição repositorios, ERROR: ${repositorios.status}`);
+            }
+      
+          }
+    }
 }
     
 else{
