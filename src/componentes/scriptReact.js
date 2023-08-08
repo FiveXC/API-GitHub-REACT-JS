@@ -21,8 +21,8 @@ function ExibindoInfosGitHub(props) {
         <>
         <h2 className="h2repositorio">Repositórios</h2>
              <div className="divAreaRepositorio">
-                {props.repositorios.map((ref, index) => (
-                  <a className = "linkRepositorio" href = {ref.html_url} target="_blank" key={index} >{ref.full_name}</a>
+                {props.repositorios.map((item, index) => (
+                  <a className = "linkRepositorio" href = {item.html_url} target="_blank" key={index} >{item.full_name}</a>
                 ))}
              </div>
          
